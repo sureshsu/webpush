@@ -15,6 +15,8 @@ async function registerServiceWorker() {
         applicationServerKey: publicVapidKey,
     });
 
+    console.log("pushManager subscription = "+ subscription);
+    
     // await fetch("/subscribe", {
     //     method: "POST",
     //     body: JSON.stringify(subscription),
