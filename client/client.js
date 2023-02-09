@@ -10,13 +10,15 @@ async function registerServiceWorker() {
         scope: '/webpush/client/'
     }); 
 
+    console.log("service worker = "+ register);
+
     const subscription = await register.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: publicVapidKey,
     });
 
     console.log("pushManager subscription = "+ subscription);
-    
+
     // await fetch("/subscribe", {
     //     method: "POST",
     //     body: JSON.stringify(subscription),
