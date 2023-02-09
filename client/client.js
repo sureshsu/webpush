@@ -15,11 +15,11 @@ async function registerServiceWorker() {
         applicationServerKey: publicVapidKey,
     });
 
-    await fetch("/subscribe", {
-        method: "POST",
-        body: JSON.stringify(subscription),
-        headers: {
-            "Content-Type": "application/json",
-        }
-    })
+    // await fetch("/subscribe", {
+    //     method: "POST",
+    //     body: JSON.stringify(subscription),
+    //     headers: {
+    //         "Content-Type": "application/json",
+    //     }
+    // })
 }
