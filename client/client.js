@@ -6,8 +6,8 @@ if('serviceWorker' in navigator) {
 }
 
 async function registerServiceWorker() {
-    const register = await navigator.serviceWorker.register('https://sureshsu.github.io/webpush/client/worker.js', {
-        // scope: '/'
+    const register = await navigator.serviceWorker.register('./worker.js', {
+        scope: '/'
     });
 
     const subscription = await register.pushManager.subscribe({
