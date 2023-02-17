@@ -34,7 +34,7 @@ async function registerServiceWorker() {
                 // console. In a production environment it might make sense to
                 // also report information about errors back to the
                 // application server.
-                console.error(error);
+                console.log(error);
               }
             );
     });
