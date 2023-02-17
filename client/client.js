@@ -39,7 +39,7 @@ async function registerServiceWorker() {
             );
     });
 
-    console.log("pushManager subscription = "+ subscription);
+    // console.log("pushManager subscription = "+ subscription);
 
     // await fetch("/subscribe", {
     //     method: "POST",
