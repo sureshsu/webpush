@@ -6,6 +6,11 @@ if('serviceWorker' in navigator) {
 }
 
 async function registerServiceWorker() {
+    if (!('PushManager' in window)) {
+      // Push isn't supported on this browser, disable or hide UI.
+      console.log("Push manager not supported in this browser: " + navigator);
+        return;
+    }
     const register = await navigator.serviceWorker.register('./worker.js', {
         scope: '/webpush/client/'
     }); 
